@@ -3,7 +3,7 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+highlighter: rouge
 
 
 markdown: kramdown
@@ -30,7 +30,7 @@ maruku:
 
 kramdown:
  fenced_code_blocks: true
-# use_coderay: true
+ use_coderay: true
  no_intra_emphasis: true 
  fenced_code_blocks: true
  autolink: true
