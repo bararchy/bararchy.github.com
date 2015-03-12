@@ -7,7 +7,7 @@ category : lessons
 
 
 
-```
+```ruby
 
 def testing(test)
 puts test
