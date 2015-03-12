@@ -1,9 +1,11 @@
 ---
 layout: post
-category : lessons
+category : experiences
 ---
 {% include JB/setup %}
 
+
+This is my first blog try, I started this 'project' of a kind to write about my experience in creating my first ever Ruby GEM.
 
 
 
