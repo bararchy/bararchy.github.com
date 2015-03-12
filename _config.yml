@@ -3,10 +3,10 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+highlighter: pygment
 
 
-markdown: redcarpet
+markdown: kramdown
 
 redcarpet:
   extensions: ["no_intra_emphasis", 
@@ -29,7 +29,28 @@ maruku:
   fenced_code_blocks: true
 
 kramdown:
-  fenced_code_blocks: true
+ fenced_code_blocks: true
+# use_coderay: true
+ no_intra_emphasis: true 
+ fenced_code_blocks: true
+ autolink: true
+ tables: true
+ with_toc_data: true
+ strikethrough: true
+ lax_html_block: true
+ superscript: true
+ gh_blockcode: true
+ no_intraemphasis: true
+ lineno: false
+
+coderay:
+ coderay_wrap: div
+ coderay_line_numbers: ''
+ coderay_line_numbers_start: 1
+ coderay_tab_width: 2
+ coderay_bold_every: 10
+ coderay_css: class
+
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.

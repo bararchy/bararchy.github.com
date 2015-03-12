@@ -21,10 +21,34 @@ As I already had some experience with ruby (automation and scripting for our ser
 # Planning (or the lack thereof..)
 <br>
 The first thing I did was thinking about What I need for this to work:<br>
-<li> Ruby REST client implementation </li>
-+ rest-client
-* API Docs from the server developer
-  [x] ask and you shell receive ! at lest I did... in the next mail.
+  
+* Ruby REST client implementation </li>
+  * <a href="https://github.com/rest-client/rest-client"> rest-client </a>
+*   API Docs from the server developer
+  *   ask and you shell receive ! at lest I did... in the next mail.
+
+<br>
+now what ?<br>
+Create a basic Ruby method to contact the server and output some data:
+
+~~~ruby
+# Lets require the needed gem
+require 'rest-client'
+
+# Now, lets build a basic call using the supplied API
+def send_request(request_string)
+  RestClient::Request.execute(
+    method: :post,
+    url: @url,
+    headers: {
+      servletRequestID: 'MethodRequest',
+      BusinessLogic: "{Username:'', Password:'', RoleID: '00003', ExtensionID: 'mobile', iVerifyUserAccount: ['test', '1234', true]}"
+    }
+  )
+end
+~~~
+
+
 
 ```ruby
 
