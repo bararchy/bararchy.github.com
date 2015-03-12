@@ -1,19 +1,13 @@
 ---
 layout: page
 title: On Development and Security
-tagline: Supporting tagline
 ---
 {% include JB/setup %}
 
 
-## Sample Posts
 
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
 
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
+Posts by date:
 
 <ul class="posts">
   {% for post in site.posts %}
@@ -21,9 +15,11 @@ Here's a sample "posts list".
   {% endfor %}
 </ul>
 
-## To-Do
+```ruby
+def testing(test)
+  puts test
+end
 
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
-
-
+testing('hi')
+=> "hi"
+```
