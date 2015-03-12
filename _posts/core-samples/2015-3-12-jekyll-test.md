@@ -7,5 +7,10 @@ tags : [intro, beginner, jekyll, tutorial]
 {% include JB/setup %}
 
 ```ruby
-puts "hi"
+def testing(test)
+  puts test
+end
+
+testing('hi')
+=> "hi"
 ```

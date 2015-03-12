@@ -15,10 +15,3 @@ Posts by date:
   {% endfor %}
 </ul>
 
-
-    def testing(test)
-      puts test
-    end
-
-    testing('hi')
-    => "hi"
