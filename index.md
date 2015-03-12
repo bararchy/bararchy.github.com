@@ -5,6 +5,9 @@ title: On Development and Security
 {% include JB/setup %}
 
 
+
+<a href="{{ BASE_PATH }}/categories.html"> All Categories </a>
+
 Posts by date:
 
 <ul class="posts">
