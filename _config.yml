@@ -9,15 +9,16 @@ highlighter: pygments
 markdown: redcarpet
 
 redcarpet:
-  #extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-  fenced_code_blocks: true
-  no_intra_emphasis: true
-  autolink: true
-  strikethrough: yes
-  lax_html_block: yes
-  superscript: yes
-  tables: yes
-  with_toc_data: yes
+  extensions: ["no_intra_emphasis", 
+               "fenced_code_blocks",
+               "autolink",
+               "tables",
+               "with_toc_data",
+               "strikethrough",
+               "lax_html_block",
+               "superscript",
+               "gh_blockcode",
+               "no_intraemphasis"]
 
 maruku:
   use_tex:    false
