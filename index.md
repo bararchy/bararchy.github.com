@@ -15,11 +15,10 @@ Posts by date:
   {% endfor %}
 </ul>
 
-```ruby
-def testing(test)
-  puts test
-end
 
-testing('hi')
-=> "hi"
-```
+    def testing(test)
+      puts test
+    end
+
+    testing('hi')
+    => "hi"
