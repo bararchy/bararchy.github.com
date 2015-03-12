@@ -8,11 +8,11 @@ tags : [intro, beginner, jekyll, tutorial]
 
 ```ruby
 
-def testing(test)
-  puts test
-end
+  def testing(test)
+    puts test
+  end
 
-testing('hi')
-=> "hi"
+  testing('hi')
+  => "hi"
 
 ```
