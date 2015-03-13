@@ -3,7 +3,7 @@
 permalink: /:categories/:year/:month/:day/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+highlighter: rouge
 
 
 markdown: kramdown
@@ -19,14 +19,6 @@ redcarpet:
                "superscript",
                "gh_blockcode",
                "no_intraemphasis"]
-
-maruku:
-  use_tex:    false
-  use_divs:   false
-  png_engine: blahtex
-  png_dir:    images/latex
-  png_url:    /images/latex
-  fenced_code_blocks: true
 
 kramdown:
  fenced_code_blocks: true
