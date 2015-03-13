@@ -32,7 +32,7 @@ now what ?<br>
 
 Create a basic Ruby method to contact the server and output some data:
 
-~~~ruby
+~~~
 # Lets require the needed gem
 
 require 'rest-client'
@@ -50,6 +50,7 @@ def iVerifyUserAccount
   )
 end
 ~~~
+{: .language-ruby}
 
 <br>
 Running the above example resulted in the right output, nice ! looks like Ruby is super easy ha ? <br>
@@ -75,7 +76,7 @@ So lets go to work !<br>
 
 * Create one method which sends the required changing string
 
-~~~ruby
+~~~
 def send_request(request_string)
   RestClient::Request.execute(
     method: :post,
@@ -87,28 +88,31 @@ def send_request(request_string)
   )
 end
 ~~~
+{: .language-ruby}
 
 * Create each unique method to use this new "send_request" method
 
-~~~ruby
+~~~
 def iVerifyUserAccount
   send_request("iVerifyUserAccount: ['#{@user_name}', '#{@password}', true]")
 end
 ~~~
+{: .language-ruby}
 
 * Nope... Apply Ruby conventions ! 
 
-~~~ruby
+~~~
 def verify_user_account
   send_request("iVerifyUserAccount: ['#{@user_name}', '#{@password}', true]")
 end
 ~~~
+{: .language-ruby}
 
 Ohh yeah ! much better !!! <br>
 
 * Let the user initialize with arguments
 
-{% highlight ruby %}
+~~~
 def initialize(config_hash={})
   @extension_id = config_hash[:extension_id]
   @user_name = config_hash[:user_name]
@@ -116,7 +120,8 @@ def initialize(config_hash={})
   @url = config_hash[:url]
   @role_id = config_hash[:role_id]
 end
-{% endhighlight %}
+~~~
+{: .language-ruby}
 
 * now.. now.. this is shaping up to be a nice looking code right here:
 <a href="https://github.com/bararchy/safe-t-rest/blob/master/lib/safe-t-rest.rb"> Nicely Done Ruby Code :) </a>
