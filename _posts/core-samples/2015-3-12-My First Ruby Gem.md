@@ -52,11 +52,11 @@ end
 
 <br>
 Running the above example resulted in the right output, nice ! looks like Ruby is super easy ha ? <br>
-So... what now ? apparently roboticly recreate each method for each call to the API <br>
+So... what now ? apparently robotically recreate each method for each call to the API <br>
 This what the code looked like:
 <a href="https://github.com/bararchy/safe-t-rest/blob/eb974ed1977c817aa131af772bd8c309b443eb64/lib/safe-t-rest.rb"> Very ugly code </a> <br>
 As I'm not a expert or even formally educated programmer, for me this was it.<br>
-I thought to myself, Yey ! project done, let ask the guys at ruby-talk for inputs (and inputs I got..)<br>
+I thought to myself, Yey ! project done, lets ask the guys at ruby-talk for inputs (and inputs I got..)<br>
 I got allot of responses but basically this was it:
 
 * Respect Ruby Conventions !
