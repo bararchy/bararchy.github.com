@@ -108,7 +108,7 @@ Ohh yeah ! much better !!! <br>
 
 * Let the user initialize with arguments
 
-~~~ruby
+{% highlight ruby %}
 def initialize(config_hash={})
   @extension_id = config_hash[:extension_id]
   @user_name = config_hash[:user_name]
@@ -116,7 +116,7 @@ def initialize(config_hash={})
   @url = config_hash[:url]
   @role_id = config_hash[:role_id]
 end
-~~~
+{% endhighlight %}
 
 * now.. now.. this is shaping up to be a nice looking code right here:
 <a href="https://github.com/bararchy/safe-t-rest/blob/master/lib/safe-t-rest.rb"> Nicely Done Ruby Code :) </a>
