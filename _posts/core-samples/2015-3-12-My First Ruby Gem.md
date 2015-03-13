@@ -22,7 +22,7 @@ As I already had some experience with ruby (automation and scripting for our ser
 <br>
 The first thing I did was thinking about What I need for this to work:<br>
   
-* Ruby REST client implementation </li>
+* Ruby REST client implementation
   * <a href="https://github.com/rest-client/rest-client"> rest-client </a>
 *   API Docs from the server developer
   *   ask and you shell receive ! at lest I did... in the next mail.
