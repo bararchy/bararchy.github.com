@@ -3,8 +3,6 @@ layout: post
 category : experiences
 tags : [ruby, development]
 ---
-{% include JB/setup %}
-
 
 # Thanks guys !
 <br>

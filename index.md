@@ -3,7 +3,7 @@ layout: page
 title: On Development and Security
 ---
 {% include JB/setup %}
-<link rel="stylesheet" type="text/css" href="assets/themes/bootstrap-3/css/style.css">
+
 <a href="{{ BASE_PATH }}/categories.html"> All Categories </a>
 
 Posts by date:
