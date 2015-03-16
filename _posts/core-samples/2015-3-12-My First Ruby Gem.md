@@ -11,15 +11,16 @@ I started this 'project' of a kind to write about my experience in creating my f
 This was a fun and educating experience, and I especially was amazed by the great feedback from people on the ruby mailing list and the ruby IRC channel on freenode.<br><br>
 
 # How did it all start ?
-<br> 
+<br>
 One sunny morning an email arrived from Safe-T's server developer, the email stated:<br>
 Our new product <a href="http://www.safe-t.com/safe-t-box/"> Safe-T Box </a> has a new REST based API, it is your duty (mine alone...) to create a usage example of this new API using a language of your choice.<br>
 As I already had some experience with ruby (automation and scripting for our servers) the choice was clear.<br>
 <br>
+
 # Planning (or the lack thereof..)
 <br>
 The first thing I did was thinking about What I need for this to work:<br>
-  
+
 * Ruby REST client implementation
   * <a href="https://github.com/rest-client/rest-client"> rest-client </a>
 *   API Docs from the server developer
@@ -97,7 +98,7 @@ end
 ~~~
 {: .language-ruby}
 
-* Nope... Apply Ruby conventions ! 
+* Nope... Apply Ruby conventions !
 
 ~~~
 def verify_user_account
