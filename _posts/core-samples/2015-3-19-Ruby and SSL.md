@@ -31,7 +31,7 @@ TLS like SSL has 3 versions (one more will be released soon):<br>
 
 *  Version 1 (TLSv1.0) - The differences between this protocol and SSL 3.0 are not dramatic, but they are significant enough to preclude interoperability between TLS 1.0 and SSL 3.0.
 *  Version 2 (TLSv1.1) - TLS 1.1 was defined in RFC 4346 in April 2006, it has more security features and some security issues were addressed.
-*  Version 3 (TLSv1.2) - TLS 1.2 was defined in RFC 5246 in August 2008, it too has more security focused implantation.
+*  Version 3 (TLSv1.2) - TLS 1.2 was defined in RFC 5246 in August 2008, it too has more security focused implementation.
 
 <br>
 TLS is currently more or less secured, most of the issues that affect it are more related to specific software implementation then the protocol it self.<br>
@@ -218,9 +218,32 @@ ssl_context.options = ssl_options
 ~~~
 {: .language-ruby}
 
-Did you see what I did there ? this + that + this one too, why did I added all those object together ? well, because they are integers (which point to a C enum), each with it's own specific number so the OpenSSL lib knows what we want and don't want to use.<br>
+Did you see what I did there ? this + that + this one too, why did I added all those object together ? well, because they are integers, each with it's own specific number so the OpenSSL lib knows what we want and don't want to use.<br>
 
-So, what we have now ? we have a ssl_context object with strong ciphers and even stronger protocol specific options, this is all nice and dandy, but it's just a client, which means we cannot receive SSL connections with it, only to initiate (we are not the server)<br>
+The next step is to configure the Certificate options, those options are critical, why ? so we can defend ourselves from MITM attacks, the certificate part of SSL is the core logic behind the peer-verification process, yes, my connection is encrypted but who is receiving the data ?<br>
+What we want is to configure our system's certificate store for the ssl_context.<br>
+
+~~~
+# Initialize the Store object
+cert_store = OpenSSL::X509::Store.new
+# Tell the store to configure the default OS store path
+cert_store.set_default_paths
+# Add the store to the ssl_context object
+ssl_context.cert_store = cert_store
+~~~
+{: .language-ruby}
+
+*  Important !
+
+Don't forget to change the ssl_context.verify_mode <br>
+
+~~~
+ssl_context.verify_mode = OpenSSL::SSL::VERIFY_PEER
+~~~
+{: .language-ruby}
+
+So, what we have now ? we have a ssl_context object with strong ciphers and even stronger protocol specific options, and also a check for invalid certificates.<br>
+This is all nice and dandy, but it's just a client, which means we cannot receive SSL connections with it, only to initiate (we are not the server)<br>
 
 And thats kind of what you need to know on the basic usage of SSL and Ruby, if I will get requests from people, I'll add a server side example and explain the differences between the two. <br>
 
